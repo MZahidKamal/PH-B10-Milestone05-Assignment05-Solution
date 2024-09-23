@@ -10,7 +10,7 @@ const HISTORY_SECTION = document.querySelector('.history-section')
 const DONATION_CARD_CONTAINER = document.getElementById("donation-card-container");
 const DONATION_CONFIRMATION_MODAL = document.getElementById("donation_confirmation_modal");
 
-const BLOG_PAGE = '../blog.html';
+const BLOG_PAGE = './blog.html';
 // const BLOG_PAGE = 'https://mzahidkamal.github.io/PH-B10-Milestone05-Assignment05-Solution/blog.html';
 
 
