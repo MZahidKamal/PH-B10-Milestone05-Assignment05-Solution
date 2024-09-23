@@ -2,3 +2,9 @@
 function test() {
     console.log('Tested: This line has executed.');
 }
+
+
+/* It will redirect from one html page to another. ===================================================================*/
+function redirectToThisPage(htmlPagePath) {
+    window.location.href = htmlPagePath;
+}
