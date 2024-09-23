@@ -7,3 +7,6 @@ const HOME_PAGE = '../index.html';
 HOME_BUTTON.addEventListener("click", function (event) {
     redirectToThisPage(HOME_PAGE);
 })
+
+
+/*====================================================================================================================*/

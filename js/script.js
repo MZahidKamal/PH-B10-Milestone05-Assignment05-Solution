@@ -33,3 +33,38 @@ HISTORY_BUTTON.addEventListener("click", function (event) {
     showThisElement(HISTORY_SECTION);
     hideThisElement(DONATION_SECTION);
 })
+
+
+/*===== INPUT VALIDATION & MAKE DONATION =============================================================================*/
+for (const child of DONATION_CARD_CONTAINER.children) {
+
+    const AMOUNT_INPUT_FIELD = child.querySelector('.amount-input-field');
+    const DONATE_NOW_BUTTON = child.querySelector('.donate-now-button');
+
+    AMOUNT_INPUT_FIELD.addEventListener('input', function (event) {
+
+        if (checkDepositAmountValidity(AMOUNT_INPUT_FIELD)){
+            hideWarning(AMOUNT_INPUT_FIELD);
+            enableThis(DONATE_NOW_BUTTON);
+        }else {
+            showWarning(AMOUNT_INPUT_FIELD);
+            disableThis(DONATE_NOW_BUTTON);
+        }
+    })
+
+    DONATE_NOW_BUTTON.addEventListener('click', function (event) {
+        if (checkDepositAmountValidity(AMOUNT_INPUT_FIELD) && AMOUNT_INPUT_FIELD.value.length !== 0){
+            makeDebitFromWallet(AMOUNT_INPUT_FIELD);
+            makeCreditToDonationCampaign(AMOUNT_INPUT_FIELD);
+            createHistoryLog(AMOUNT_INPUT_FIELD);
+            makeThisFieldEmpty(AMOUNT_INPUT_FIELD);
+            DONATION_CONFIRMATION_MODAL.showModal();
+        } else {
+            showWarning(AMOUNT_INPUT_FIELD);
+            makeThisFieldEmpty(AMOUNT_INPUT_FIELD)
+        }
+    })
+}
+
+
+/*====================================================================================================================*/
