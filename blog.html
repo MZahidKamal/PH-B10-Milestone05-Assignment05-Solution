@@ -1,0 +1,168 @@
+<!doctype html>
+<!--It indicates the document type.-->
+
+<html lang="en" data-theme="light">
+<!--It indicates the language of the document is English and the theme is by default light.-->
+
+
+<!--HEAD SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!--These are some Meta tags, which provide metadata about a webpage, aiding in SEO and responsive design.-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!--Here linking the Lexend Font with this html page through link tags provided by Google Fonts.-->
+
+    <script src="https://kit.fontawesome.com/4f03f216dd.js" crossorigin="anonymous"></script>
+    <!--Here linking the Fontawesome Kit through CDN with this html page.-->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
+    <!--Here linking the Daisy UI through CDN with this html page.-->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Here linking the external style.css file with this html page.-->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Here linking the Tailwind CSS through Tailwind CLI with this html page.-->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        page_color_01: "#FFFFFF",
+                        page_color_02: "#F9F7F3",
+                        button_color_01: "#B4F461",
+                        button_color_02: "#F3F3F3",
+                        button_color_03: "#F2F2F2",
+                    },
+                    fontFamily: {
+                        lexend: ["Lexend", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <!--Here linking the 'tailwind.config' object with this html page, to customize my configuration with my own design tokens.-->
+
+    <title>Blog</title>
+    <!--This is the title of this page-->
+</head>
+<!--HEAD SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+
+<!--BODY SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<body class="font-lexend">
+
+
+<!--HEADER SECTION STARTS HERE----------------------------------------------------------------------------------------->
+<header>
+    <nav class="fixed top-0 left-0 z-10 w-full">
+
+        <!-- NAVBAR 1ST PART -->
+        <div class="bg-page_color_02/80 backdrop-blur-xl">
+            <div class="container 2xl:w-11/12 xl:w-11/12 lg:w-11/12 md:-w-11/12 sm:-w-11/12 w-11/12 mx-auto py-6 grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-3">
+                <div class="flex 2xl:justify-start xl:justify-start lg:justify-start md:justify-start sm:justify-start justify-center items-center 2xl:order-1 xl:order-1 lg:order-1 md:order-2 sm:order-2 order-2">
+                    <button id="home-button" class="btn w-28 h-12 rounded-lg bg-button_color_01 text-xl font-semibold">
+                        Home
+                    </button>
+                </div>
+                <div class="flex justify-center items-center gap-3 2xl:order-2 xl:order-2 lg:order-2 md:order-1 sm:order-1 order-1 2xl:col-span-1 xl:col-span-1 lg:col-span-1 md:col-span-2 sm:col-span-2 col-span-1">
+                    <img src="./assets/icons/logo.png" alt="">
+                    <h1 class="text-2xl font-semibold">Donate Bangladesh</h1>
+                </div>
+                <div class="flex 2xl:justify-end xl:justify-end lg:justify-end md:justify-end sm:justify-end justify-center items-center gap-3 2xl:order-3 xl:order-3 lg:order-3 md:order-3 sm:order-3 order-3">
+                    <p class="text-base font-light">Wallet Balance: </p>
+                    <img src="./assets/icons/coin.png" alt="">
+                    <h1 class="text-xl font-medium"><span>5500</span> BDT</h1>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+</header>
+<!--HEADER SECTION ENDS HERE------------------------------------------------------------------------------------------->
+
+
+<!--MAIN SECTION STARTS HERE------------------------------------------------------------------------------------------->
+<main class="pt-60 pb-20">
+
+
+    <!-- FAQ CONTAINER -->
+    <section class="history-cards-section">
+        <div class="container mx-auto flex flex-col gap-y-8">
+
+            <!-- FAQ HEADING -->
+            <div class="flex justify-start items-center gap-5">
+                <h1 class="text-3xl font-extrabold">Important FAQ</h1>
+                <img src="./assets/icons/icons8-question-mark.gif" alt="">
+            </div>
+
+            <!-- FAQ ACCORDION -->
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked"/>
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p class="text-base p-10">The Document Object Model (DOM) is a programming interface representing HTML documents. In
+                            other words, the DOM works like a bridge, creating a structure between the browser and the
+                            web page. This structure is like a tree, where each element, tag, or content is treated as a
+                            node.<br><br>It means that, for example, every element on a web page (headings, paragraphs, images,
+                            etc.) is a node, and the DOM allows you to access, modify, add, or remove these nodes using
+                            a language like JavaScript. You can easily change any part of a web page dynamically through
+                            the DOM. The browser displays the HTML of the page like a tree, and this tree is the
+                            DOM.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4"/>
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>Write your answer here.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4"/>
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
+                        and why is it useful?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Write your answer here.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4"/>
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Write your answer here.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+</main>
+<!--MAIN SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+
+<!--FOOTER SECTION STARTS HERE----------------------------------------------------------------------------------------->
+<footer class="w-full h-32 bg-page_color_02"></footer>
+<!--FOOTER SECTION ENDS HERE------------------------------------------------------------------------------------------->
+
+<!--JAVASCRIPT LINKING STARTS HERE------------------------------------------------------------------------------------->
+<script src="./js/script.js"></script>
+<!--JAVASCRIPT LINKING ENDS HERE--------------------------------------------------------------------------------------->
+
+</body>
+<!--BODY SECTION ENDS HERE--------------------------------------------------------------------------------------------->
+
+</html>
