@@ -1,6 +1,6 @@
 /*===== ALL NECESSARY HTML ELEMENTS ==================================================================================*/
 const HOME_BUTTON = document.getElementById("home-button");
-const HOME_PAGE = './index.html';
+const HOME_PAGE = '../index.html';
 
 
 /*===== IF THE 'HOME' BUTTON IS CLICKED ==============================================================================*/
