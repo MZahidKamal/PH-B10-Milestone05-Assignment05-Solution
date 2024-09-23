@@ -209,6 +209,29 @@
         </div>
     </section>
 
+    <!-- MODAL SECTION -->
+    <section class="modal-section">
+        <div class="container mx-auto flex justify-center">
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="donation_confirmation_modal" class="modal">
+                <div class="modal-box flex flex-col justify-center items-center gap-y-2">
+                    <h1 class="text-3xl font-extrabold">Congrats!</h1>
+                    <img src="../assets/icons/coin.png" alt="" class="w-auto h-10">
+                    <p class="">Your Have Donated for Humankind</p>
+                    <h1 class="text-xl font-bold">Successfully</h1>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn h-10 rounded-lg bg-button_color_03 text-base font-bold">close
+                                confirmation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </div>
+    </section>
+
 
 </main>
 <!--MAIN SECTION ENDS HERE--------------------------------------------------------------------------------------------->
