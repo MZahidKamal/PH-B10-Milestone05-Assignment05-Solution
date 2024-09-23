@@ -1,0 +1,82 @@
+function calculateTax(income, expenses) {
+    if (
+        typeof income !== 'number'
+        || typeof expenses !== 'number'
+        || income < 0
+        || expenses < 0
+        || income < expenses
+    ) return 'Invalid Input';
+    return ((income - expenses) * 20 / 100);
+}
+
+
+function sendNotification(email) {
+    if (
+        typeof email !== 'string'
+        || !email.includes('@')
+        || email.indexOf('@') === 0
+        || email.indexOf('@') === email.length-1
+        || email.indexOf('.') === 0
+        || email.indexOf('.') === email.length-1
+        || email.split('@').length !== 2
+        || email.split('@')[1].split('.').length !== 2
+    ) return 'Invalid Email';
+    let userName = email.slice(0, email.indexOf('@'));
+    let domain = email.slice(email.indexOf('@') + 1);
+    return `${userName} sent you an email from ${domain}`;
+}
+
+
+function checkDigitsInName(name) {
+    if (
+        typeof name !== 'string'
+        || name.length <= 0
+    ) return 'Invalid Input';
+    for (const char of name) {
+        if ('0123456789'.includes(char)) return true;
+    }
+    return false;
+}
+
+
+function calculateFinalScore(obj) {
+    if (
+        obj === null
+        || obj === undefined
+        || Object.keys(obj).length !== 4
+        || typeof obj !== 'object'
+        || typeof obj.name !== 'string'
+        || typeof obj.testScore !== 'number'
+        || typeof obj.schoolGrade !== 'number'
+        || typeof obj.isFFamily !== 'boolean'
+        || obj.name.length <= 0
+        || obj.testScore > 50
+        || obj.schoolGrade > 30
+    ) return 'Invalid Input';
+    let totalScore;
+    if (obj.isFFamily) totalScore = obj.testScore + obj.schoolGrade + 20;
+    else totalScore = obj.testScore + obj.schoolGrade;
+    return (totalScore >= 80);
+}
+
+
+function waitingTime(waitingTimes, serialNumber) {
+    if (
+        !Array.isArray(waitingTimes)
+        || !waitingTimes.every(minute => typeof minute === 'number' && minute > 0)
+        || typeof serialNumber !== 'number'
+        || (waitingTimes.length === 0 && serialNumber !== 1)
+        || waitingTimes.length >= serialNumber
+    ) return 'Invalid Input';
+    let totalWaitingTime = 0;
+    let averageTimePerPerson = 0;
+    if (waitingTimes.length === 0 && serialNumber === 1) {
+        return totalWaitingTime;
+    } else {
+        for (const time of waitingTimes) {
+            totalWaitingTime += time;
+        }
+        averageTimePerPerson = Math.round(totalWaitingTime / waitingTimes.length);
+    }
+    return ((serialNumber - 1) - waitingTimes.length) * averageTimePerPerson;
+}
