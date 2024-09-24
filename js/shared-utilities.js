@@ -38,7 +38,7 @@ function hideThisElement (htmlElement){
 }
 
 
-/* It will check if the given donation amount valid and is following the general convention or not. ==================*/
+/* It will check if the given donation amount is valid and is following the general convention or not. ===============*/
 function checkDepositAmountValidity(htmlFieldElement) {
     return !(
         (htmlFieldElement.value.length >= 1
