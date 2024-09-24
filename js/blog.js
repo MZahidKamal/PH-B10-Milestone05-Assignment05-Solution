@@ -1,11 +1,16 @@
 /*===== ALL NECESSARY HTML ELEMENTS ==================================================================================*/
-const HOME_BUTTON = document.getElementById("home-button");
-const HOME_PAGE = './index.html';
+const HOME_PAGE = '../templates/index.html';
 
 
 /*===== IF THE 'HOME' BUTTON IS CLICKED ==============================================================================*/
-HOME_BUTTON.addEventListener("click", function (event) {
-    redirectToThisPage(HOME_PAGE);
+document.addEventListener("DOMContentLoaded", function () {
+    const HOME_BUTTON = document.getElementById("home-button");
+
+    if (HOME_BUTTON){
+        HOME_BUTTON.addEventListener("click", function () {
+            redirectToThisPage(HOME_PAGE);
+        })
+    }
 })
 
 
