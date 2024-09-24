@@ -9,7 +9,7 @@ const HISTORY_SECTION = document.querySelector('.history-section')
 const DONATION_CARD_CONTAINER = document.getElementById("donation-card-container");
 const DONATION_CONFIRMATION_MODAL = document.getElementById("donation_confirmation_modal");
 
-const BLOG_PAGE = '../templates/blog.html';
+const BLOG_PAGE = './templates/blog.html';
 
 
 /*===== IF THE 'BLOG' BUTTON IS CLICKED ==============================================================================*/

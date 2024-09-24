@@ -1,5 +1,5 @@
 /*===== ALL NECESSARY HTML ELEMENTS ==================================================================================*/
-const HOME_PAGE = '../templates/index.html';
+const HOME_PAGE = './templates/index.html';
 
 
 /*===== IF THE 'HOME' BUTTON IS CLICKED ==============================================================================*/
