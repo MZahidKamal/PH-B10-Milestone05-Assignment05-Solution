@@ -105,45 +105,78 @@
 
             <!-- FAQ ACCORDION -->
             <div class="join join-vertical w-full">
+
+                <!-- QUESTION & ANSWER 01 -->
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" checked="checked"/>
                     <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                     <div class="collapse-content">
-                        <p class="text-base p-10">The Document Object Model (DOM) is a programming interface representing HTML documents. In
+                        <p class="text-base p-10">The Document Object Model (DOM) is a programming interface
+                            representing HTML documents. In
                             other words, the DOM works like a bridge, creating a structure between the browser and the
                             web page. This structure is like a tree, where each element, tag, or content is treated as a
-                            node.<br><br>It means that, for example, every element on a web page (headings, paragraphs, images,
+                            node.<br><br>It means that, for example, every element on a web page (headings, paragraphs,
+                            images,
                             etc.) is a node, and the DOM allows you to access, modify, add, or remove these nodes using
                             a language like JavaScript. You can easily change any part of a web page dynamically through
                             the DOM. The browser displays the HTML of the page like a tree, and this tree is the
                             DOM.</p>
                     </div>
                 </div>
+
+                <!-- QUESTION & ANSWER 02 -->
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4"/>
                     <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                     <div class="collapse-content">
-                        <p>Write your answer here.</p>
+                        <p class="text-base p-10">In JavaScript, various methods are used to select elements from the DOM. Some of the most
+                            common ones are:<br><br>getElementById() – Selects a particular element by its specific
+                            ID.<br>querySelector() – Selects an element similar to a CSS selector, returning the first
+                            matching element.<br>getElementsByClassName() – Selects multiple elements by their class
+                            name and returns them as an HTMLCollection.<br><br>Through these methods, we can identify,
+                            manipulate, or interact with specific elements in HTML, as each method targets differently.
+                        </p>
                     </div>
                 </div>
+
+                <!-- QUESTION & ANSWER 03 -->
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4"/>
                     <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
                         and why is it useful?
                     </div>
                     <div class="collapse-content">
-                        <p>Write your answer here.</p>
+                        <p class="text-base p-10">In the DOM, 'event delegation' means attaching a single event listener
+                            to a parent element instead of placing separate event listeners on each child element. This
+                            listener then works for all the parent's child elements.<br><br>Why is event delegation
+                            useful?<br>1. There's no need to place individual listeners for each child element. One
+                            listener on the parent element is enough, which reduces memory usage.<br>2. If a new child
+                            element is added later, the listener can still manage it.<br>3. Instead of adding multiple
+                            listeners for each child element, only one listener can control everything.<br><br>This
+                            makes event handling much simpler.</p>
                     </div>
                 </div>
+
+                <!-- QUESTION & ANSWER 04 -->
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4"/>
                     <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
                         styles using the DOM?
                     </div>
                     <div class="collapse-content">
-                        <p>Write your answer here.</p>
+                        <p class="text-base p-10">Manipulating an element's attributes and styles using the DOM means
+                            changing the properties or appearance of an HTML element.<br><br>Manipulating attributes:
+                            Any attribute (the properties of HTML) of an element can be changed. For example, the ID,
+                            class, src, href, and similar attributes can be modified. To do this, specific methods are
+                            used to set, remove, or retrieve attributes.<br><br>Manipulating styles: The CSS styles of
+                            an element can also be manipulated. The appearance of the HTML element, such as its
+                            background color, font size, or border, can be changed using the DOM. By manipulating
+                            styles, the CSS values are updated, as JavaScript can directly modify the
+                            stylesheet.<br><br>In this way, the DOM allows you to customize an element's look and
+                            behavior as per your needs.</p>
                     </div>
                 </div>
+
             </div>
 
         </div>
